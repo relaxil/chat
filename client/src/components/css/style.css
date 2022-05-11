@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+/* Chat */
+body{
+  background: rgb(233, 233, 233);
+}
+#root{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  height: 100%;
+}
+.App{
+  width: 900px;
+  height: 630px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+  display: flex;
+
+  font-family: 'PT Sans', sans-serif;
+}
+
+/* contacts */
+.contacts{
+  width: 250px;
+  height: 100%;
+  border-right: 1px solid rgba(167, 167, 167, 0.5);
+}
+
+.contact.active{
+  background: rgba(167, 167, 167, 0.5)
+}
+.contact{
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 1px solid rgba(167, 167, 167, 0.5);
+}
+.contact:first-child{
+  border-top-left-radius: 12px;
+}
+.contact .lastChild{
+  border-bottom-left-radius: 12px;
+}
+.contact:hover{
+  background: rgba(167, 167, 167, 0.5);
+}
+.contact > .name{
+  font-size: 21px;
+  font-weight: 700;
+  font-style: italic;
+}
+.contact .lastMessage{
+  color: grey;
+  font-size: 14px;
+}
+
+/* messages */
+.messageMenu{
+  width: 100%;
+  max-height: 100%;
+  color: white;
+}
+.messages{
+  height: 550px;
+  display: flex;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  justify-content: right;
+}
+.messages::-webkit-scrollbar{
+  width: 0;
+}
+.content .message .name{
+  font-size: 14px;
+}
+.content .message{
+  width: 250px;
+  background: rgb(71, 71, 236);
+  padding: 10px 10px 10px 10px;
+  border-radius: 6px;
+  margin: 10px;
+}
+
+.fieldMessage{
+  border-top: 1px solid rgba(167, 167, 167, 0.5);
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+}
+.fieldMessage .customInput{
+  width: 400px;
+  padding: 14px 5px 14px 5px;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  border: 1px solid rgba(167, 167, 167);
+}
+.fieldMessage .customButton{
+  width: 100px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0 8px 8px 0;
+  text-align: center;
+  background: rgb(71, 71, 236);
+  border-left: none;
+}
+.fieldMessage .customButton:hover{
+  background: rgb(48, 48, 197);
+  transition: background linear 0.3s;
+}
+.fieldMessage .customButton .text{
+  position: relative;
+  top: 10px
+}
