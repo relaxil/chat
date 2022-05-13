@@ -1,6 +1,6 @@
-function CustomInput(){
+function CustomInput(props){
   return (
-    <input className="customInput" placeholder="Введите текст" />
+    <input ref={props.inputRef} className="customInput" placeholder="Введите текст" />
   );
 }
 

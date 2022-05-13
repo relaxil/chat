@@ -1,12 +1,23 @@
+import {useRef} from "react";
+
 import CustomButton from "./CustomButton";
 import CustomInput from "./CustomInput";
 
 function InputMessage(props) {
+  const inputRef = useRef(null);
+
+  function submit(e) {
+    e.preventDefault();
+
+    props.addMessage(inputRef.current.value);
+    inputRef.current.value = "";
+  }
+
   return (
-    <div className="fieldMessage">
-      <CustomInput />
+    <form onSubmit={submit} className="fieldMessage">
+      <CustomInput inputRef={inputRef} /* changeInput={changeInputValue} */ />
       <CustomButton />
-    </div>
+    </form>
   )
 }
 

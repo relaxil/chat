@@ -77,12 +77,14 @@ body{
 .messages{
   height: 550px;
   display: flex;
-  overflow-y: auto;
   margin-bottom: 10px;
   justify-content: right;
 }
 .messages::-webkit-scrollbar{
   width: 0;
+}
+.content{
+  overflow-y:auto;
 }
 .content .message .name{
   font-size: 14px;
@@ -109,6 +111,8 @@ body{
   border: 1px solid rgba(167, 167, 167);
 }
 .fieldMessage .customButton{
+  color: white;
+  border: none;
   width: 100px;
   cursor: pointer;
   user-select: none;

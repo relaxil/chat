@@ -1,10 +1,6 @@
-function CustomButton(){
+function CustomButton(props){
   return (
-    <div className="customButton">
-      <span className="text">
-        Отправить
-      </span>
-    </div>
+    <button className="customButton">Отправить</button>
   );
 }
 export default CustomButton;
